@@ -118,11 +118,6 @@ accuracy.seek(0)
 accuracy.write(str(scores[1]))
 accuracy.close()
 
-display_matter = open(r'/mlops/displayresult.html',"r+")
-display_matter.read()
-display_matter.write('<pre>\n---------------------------------------------\n')
-display_matter.write('\nAccuracy achieved : ' + str(scores[1])+'\n</pre>')
-display_matter.close()
 
 
 
