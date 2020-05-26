@@ -17,7 +17,7 @@ from keras.utils import np_utils
 import keras
 import sys
 
-input_file = open(r'/root/mlopstask2/input.txt',"r")
+input_file = open(r'/mlops/input.txt',"r")
 input1 = input_file.read()
 inputs = input1.split('\n')
 
@@ -113,12 +113,12 @@ print(scores[0])
 print(scores[1])
 
 
-accuracy= open(r'/root/mlopstask2/new_accuracy.txt', "w")
+accuracy= open(r'/mlops/new_accuracy.txt', "w")
 accuracy.seek(0)
 accuracy.write(str(scores[1]))
 accuracy.close()
 
-display_matter = open(r'/root/mlopstask2/displayresult.html',"r+")
+display_matter = open(r'/mlops/displayresult.html',"r+")
 display_matter.read()
 display_matter.write('<pre>\n---------------------------------------------\n')
 display_matter.write('\nAccuracy achieved : ' + str(scores[1])+'\n</pre>')
