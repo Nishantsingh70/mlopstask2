@@ -2,7 +2,7 @@ import smtplib
 
 sender_email = "nishantsingh70600@gmail.com"
 receiver_email = "nishantsingh9527@gmail.com"
-password = input(str("Please enter the password"))
+password = "**********"
 message = "Model is Successfully created"
 
 server = smtplib.SMTP('smtp.gmail.com',587)
