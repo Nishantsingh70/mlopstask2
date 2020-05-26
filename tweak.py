@@ -53,9 +53,6 @@ new_accuracy1 = float(new_accuracy1)
 accuracy_file_old = open(r'/root/mlopstask2/old_accuracy.txt',"r+")
 old_accuracy1 = accuracy_file_old.read()
 old_accuracy1 = float(old_accuracy1)
-display1 = open(r'/root/mlopstask2/displayresult.html',"r+")
-display = display1.read()
-display = float(display)
 input_file = open(r'/root/mlopstask2/input.txt', "r+")
 inputs = input_file.read()
 inputs = inputs.split('\n')
@@ -68,8 +65,6 @@ if(float(new_accuracy1) < 0.90000000000000):
     else:
         num = random.randint(0,6)
         option(num)
-else:
-    display = float(new_accuracy1)
 input_file_data = '\n'.join(inputs)
 input_file.seek(0)
 input_file.write(input_file_data)
@@ -79,12 +74,6 @@ old_accuracy1 = str(old_accuracy1)
 accuracy_file_old.seek(0)
 accuracy_file_old.write(old_accuracy1)
 accuracy_file_old.close()
-
-display = str(display)
-display1.seek(0)
-display1.write(display)
-display1.close()
-
 accuracy_file_new.close()
 
 
